@@ -63,7 +63,7 @@ contract MyUddugERC is ERC721 {
     function mintSet() external payable {
         require(tokenIdCounter <= (MAX_SUPPLY - SET_LENGTH), "Max supply reached");
         require(msg.value >= setPrice, "Insufficient funds");
-        require(!setMinted[msg.sender], "You've already minted a set");
+        require(!setMinted[msg.sender], "You have already minted a set");
 
         setMinted[msg.sender] = true;
 
